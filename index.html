@@ -3,99 +3,703 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jinish Kathiriya - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <title>Jinish Kathiriya | AI, ML, and Cybersecurity Innovator</title>
+    
+    <!-- Optimized Meta Tags -->
+    <meta name="description" content="Portfolio of Jinish Kathiriya - Creating innovative solutions in AI, ML, and Cybersecurity. Experience the future of technology.">
+    <meta name="keywords" content="AI Developer, Machine Learning Expert, Cybersecurity Specialist, Technology Innovator, Jinish Kathiriya">
+    <meta name="author" content="Jinish Kathiriya">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jinish Kathiriya - Technology Innovator">
+    <meta property="og:description" content="Exploring the intersection of AI, ML, and Cybersecurity">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/css/critical.css" as="style">
+    <link rel="preload" href="assets/js/animations.js" as="script">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #4f46e5;
+            --accent: #06b6d4;
+            --background: #0f172a;
+            --text: #f8fafc;
+            --transition: all 0.3s ease;
+        }
+
+        /* Modern Reset & Base Styles */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Enhanced Button Styles */
+        .cta-button {
+            position: relative;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            overflow: hidden;
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+    </style>
+
+    <!-- Deferred CSS Loading -->
+    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+    
+    <!-- Modern Framework Integration -->
+    <script type="module">
+        import { animate, scroll } from "https://cdn.skypack.dev/motion"
+    </script>
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Portfolio of Jinish Kathiriya - Innovative technologist specializing in AI, Machine Learning, and Cybersecurity solutions.">
+    <meta name="keywords" content="AI, Machine Learning, Cybersecurity, Portfolio, Jinish Kathiriya">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <!-- Meta Tags for SEO -->
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Jinish Kathiriya | Web Developer & AI Specialist">
+    <meta property="og:description" content="Portfolio of Jinish Kathiriya showcasing expertise in web development, AI, Machine Learning, and Cybersecurity.">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+    <!-- Language Selector Script -->
+    <script src="assets/js/i18n.js"></script>
+    <!-- Update Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Update Color Palette -->
+    <style>
+        :root {
+            --primary-bg: #1f1f1f;
+            --accent-color: #1a73e8;
+            --text-color: #f5f5f5;
+            /* ...additional variables... */
+        }
+        /* Apply the new colors and fonts */
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        /* ...existing styles... */
+    </style>
+
+    <!-- Include GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+    <!-- Include Typed.js for Animated Tagline -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Dark/Light Mode Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+            });
+        });
+    </script>
 </head>
 <body>
-    <!-- Stylish Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#">Jinish</a>
+    <!-- Enhanced Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 flex items-center justify-between py-4">
+            <a href="#" class="text-2xl font-bold text-gray-800">J K</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="nav-link text-gray-600 hover:text-blue-600">Home</a></li>
+                <li><a href="#about" class="nav-link text-gray-600 hover:text-blue-600">About</a></li>
+                \\<li><a href="#expertise" class="nav-link text-gray-600 hover:text-blue-600">Expertise</a></li>
+                <li><a href="#technologies" class="nav-link text-gray-600 hover:text-blue-600">Technologies</a></li>
+                <li><a href="#projects" class="nav-link text-gray-600 hover:text-blue-600">Projects</a></li>
+                <li><a href="#contact" class="nav-link text-gray-600 hover:text-blue-600">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-gray-600 focus:outline-none" aria-label="Toggle navigation">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <!-- ...existing code... -->
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5h16M4 12h16M4 19h16" />
+                </svg>
+            </button>
+            <!-- Dark Mode Toggle -->
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun hidden"></i>
+            </button>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="menu-toggle"></div>
     </nav>
 
-    <!-- Animated Header Section -->
-    <header id="home" class="parallax-header">
-        <div class="header-content">
-            <h1 class="animate-slide-in">Hi, I'm <span class="highlight">Jinish Kathiriya</span></h1>
-            <p class="animate-slide-in">AI & ML Developer | Cybersecurity Enthusiast | Python Developer</p>
-            <a id="download-cv" href="#" class="btn animate-fade-in">Download CV</a>
-            <a href="#projects" class="btn secondary-btn animate-fade-in">View Projects</a>
+    <!-- Language Selector -->
+    <nav class="language-selector">
+        <button data-lang="en">English</button>
+        <button data-lang="es">Español</button>
+        <!-- ...additional languages... -->
+    </nav>
+
+    <!-- Modernized Hero Section -->
+    <header id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Dynamic Background -->
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="object-cover w-full h-full">
+                <source src="video\background.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 mix-blend-multiply"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container relative z-10 mx-auto px-4 text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+                Hi, I'm Jinish Kathiriya
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-delayed">
+                <span class="typed-text"></span>
+            </p>
+            <style>
+                .cta-button-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px; /* Adjust the gap as needed */
+                }
+            </style>
+            
+            <div class="cta-button-wrapper">
+                <a href="#projects" class="cta-button group">
+                    View Projects
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            <br>
+                <a href="#contact" class="cta-button-secondary group">
+                    Get in Touch
+                    <i class="fas fa-envelope ml-2 group-hover:scale-110 transition-transform"></i>
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
         </div>
     </header>
+    <!-- Enhanced About Section -->
+    <section id="about" class="py-24 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-4">
+            <!-- Glass Container -->
+            <div class="backdrop-blur-lg bg-white/10 rounded-3xl p-8 shadow-2xl">
+                <h2 class="text-5xl font-bold text-center text-white mb-16">
+                    About <span class="text-blue-500">Me</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Profile Image Side -->
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative aspect-square rounded-2xl overflow-hidden">
+                            <img 
+                                src="images\profile.jpg" 
+                                alt="Jinish Kathiriya"
+                                class="object-cover w-full h-full transform group-hover:scale-105 transition duration-500"
+                            >
+                        </div>
+                        <!-- Social Links -->
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
+                            <a href="https://github.com/jinish2170" class="social-icon" aria-label="GitHub">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/yourusername" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <!-- Add more social links as needed -->
+                        </div>
+                    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                I'm passionate about AI, Machine Learning, and Cybersecurity. My journey is about exploring these technologies and making impactful solutions.
-            </p>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Artificial Intelligence</h3>
-                    <p>Using AI to create impactful systems and tools.</p>
+                    <!-- Content Side -->
+                    <div class="space-y-8">
+                        <div class="text-white">
+                            <h3 class="text-2xl font-bold mb-4">Who am I?</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                I'm a dedicated technologist with expertise in artificial intelligence, machine learning, and cybersecurity. My goal is to develop cutting-edge solutions that address complex challenges and drive technological advancement.
+                            </p>
+                        </div>
+
+                        <!-- Interactive Skill Bars -->
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-white mb-6">Core Skills</h3>
+                            <div class="skill-bar" data-skill="AI & Machine Learning" data-percentage="95">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-white">AI & Machine Learning</span>
+                                    <span class="text-blue-400">95%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-skill-95"></div>
+                                </div>
+                            </div>
+                            <!-- Add more skill bars as needed -->
+                        </div>
+                            </div>
+                            <!-- Carousel Controls -->
+                            <div class="flex justify-center mt-4 space-x-2">
+                                <button class="carousel-control prev" aria-label="Previous testimonial">
+                                    <i class="fas fa-chevron-left text-white"></i>
+                                </button>
+                                <button class="carousel-control next" aria-label="Next testimonial">
+                                    <i class="fas fa-chevron-right text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-lock"></i>
-                    <h3>Cybersecurity</h3>
-                    <p>Improving digital safety with advanced technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add these styles to your existing CSS -->
+    <style>
+        .social-icon {
+            @apply h-10 w-10 flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full 
+                   text-white hover:bg-blue-600 transform hover:-translate-y-1 transition-all duration-300;
+        }
+
+        .stat-card {
+            @apply p-6 rounded-xl bg-white/5 backdrop-blur-sm text-center transform hover:scale-105 
+                   transition-all duration-300 hover:bg-white/10;
+        }
+
+        @keyframes skillFill {
+            from { width: 0; }
+            to { width: var(--skill-percent); }
+        }
+
+        .animate-skill-95 {
+            --skill-percent: 95%;
+            animation: skillFill 1.5s ease-out forwards;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: -1rem;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .timeline-content {
+            padding-left: 2.5rem;
+        }
+
+        /* Testimonials Carousel Styles */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            height: 120px;
+        }
+
+        .carousel-item {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .carousel-control {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .carousel-control:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .timeline {
+                padding-left: 1rem;
+            }
+
+            .timeline::before {
+                left: 0.5rem;
+            }
+
+            .timeline-icon {
+                left: -0.5rem;
+            }
+
+            .timeline-content {
+                padding-left: 2rem;
+            }
+        }
+
+        /* Additional Hover Effects */
+        .carousel-item p {
+            transition: color 0.3s;
+        }
+
+        .carousel-item:hover p {
+            color: var(--accent-color);
+        }
+    </style>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-semibold text-center mb-12">Technology Stack</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Programming Languages</h3>
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>HTML/CSS</li>
+                    </ul>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Building sleek web applications with modern tools.</p>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">AI &amp; Machine Learning</h3>
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>Scikit-learn</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Tools &amp; Platforms</h3>
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>Adobe Premiere Pro</li>
+                        <li>Linux</li>
+                        <li>Windows</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Chess Bot</h3>
-                <p>An AI-powered chess engine built in Python for an immersive playing experience.</p>
-                <a href="https://github.com/Jinish2170/CHESS-BOT-.git" class="btn project-btn">View Project</a>
+    <section id="projects" class="parallax parallax-projects py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-semibold text-center mb-12">Projects</h2>
+            <div class="flex justify-center mb-8">
+                <!-- Project Filters -->
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="ai">AI & ML</button>
+                <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
             </div>
-            <div class="project-card">
-                <h3>Cyber Security AI File Scanner</h3>
-                <p>AI-driven file scanning tool to detect threats in real-time.</p>
-                <a href="https://github.com/Jinish2170/Cyber-Security-AI-file-scanner.git" class="btn project-btn">View Project</a>
+            <div id="projectsContainer" class="project-grid">
+                <!-- Projects will be dynamically loaded here -->
+                
             </div>
-            <div class="project-card">
-                <h3>Web Assistant AI</h3>
-                <p>A voice-enabled assistant for web searches, built to enhance productivity.</p>
-                <a href="https://github.com/Jinish2170/Web-Assistant-AI.git" class="btn project-btn">View Project</a>
+            <div class="projects-container" id="projectsContainer">
+                <!-- Project items will be added here -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out for collaboration or a friendly chat!</p>
-        <ul class="social-links">
-            <li><a href="https://www.linkedin.com/in/jinish-kathiriya" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/Jinish2170" target="_blank">GitHub</a></li>
-            <li><a href="https://x.com/JinishKathiriya" target="_blank">Twitter</a></li>
-        </ul>
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-semibold mb-4">Get in Touch</h2>
+            <p class="text-lg mb-8">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            <form id="contactForm" class="max-w-xl mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-left">Name<span class="text-red-500">*</span></label>
+                    <input type="text" id="name" name="name" class="w-full p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-left">Email<span class="text-red-500">*</span></label>
+                    <input type="email" id="email" name="email" class="w-full p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-left">Message<span class="text-red-500">*</span></label>
+                    <textarea id="message" name="message" rows="5" class="w-full p-2 rounded" required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition duration-300">Send Message</button>
+                <p id="formMessage" class="mt-4"></p>
+            </form>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Jinish Kathiriya | All Rights Reserved</p>
+    <!-- Enhanced Footer -->
+    <footer class="bg-background py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Jinish Kathiriya. All Rights Reserved.</p>
+            <p>Innovating Technology | Securing Futures</p>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Scripts -->
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="assets/js/skillsChart.js"></script>
+    <script src="assets/js/projects.js"></script>
+    <!-- Include GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script>
+        (function() { emailjs.init('YOUR_USER_ID'); })();
+    </script>
+    <!-- Analytics and Monitoring Scripts -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ANALYTICS_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_ANALYTICS_ID');
+    </script>
+    <!-- Include Additional JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Initialize Typed.js -->
+    <script>
+        var typed = new Typed('#animated-tagline', {
+            strings: ['Innovating at the Intersection of Creativity and AI'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        });
+    </script>
+
+    <!-- Initialize GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        // Hero Section Animation
+        gsap.from('.animate-heading', { opacity: 0, y: -50, duration: 1 });
+        gsap.from('.animate-button', { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+
+        // Smooth Scroll Navigation
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <!-- AI-Themed Animated Background Script -->
+    <script>
+        const canvas = document.getElementById('background-animation');
+        const ctx = canvas.getContext('2d');
+        canvas.attachShadow// ...animation code...
+    </script>
+
+    <!-- Intersection Observer for Lazy Loading Images -->
+    <script>
+        const images = document.querySelectorAll('img');
+        const options = { rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    const img = entry.target;
+                    img.src = img.getAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        }, options);
+
+        images.forEach(image => {
+            observer.observe(image);
+        });
+    </script>
+
+    <!-- Smooth Scroll Navigation -->
+    <script>
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+    <!-- Optimized Scripts Loading -->
+    <script type="module" src="assets/js/animations.js"></script>
+    <script>
+        // Initialize Typed.js
+        new Typed('.typed-text', {
+            strings: ['AI Developer', 'Machine Learning Expert', 'Cybersecurity Specialist'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((elem) => {
+            observer.observe(elem);
+        });
+    </script>
+    <!-- Add these scripts before the closing </body> tag -->
+    <script>
+        // Initialize Skill Charts using Chart.js
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillCharts = document.querySelectorAll('.skill-chart');
+
+            skillCharts.forEach(chart => {
+                const skill = chart.getAttribute('data-skill');
+                const percentage = chart.getAttribute('data-percentage');
+                const ctx = chart.querySelector('canvas').getContext('2d');
+
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [skill, ''],
+                        datasets: [{
+                            data: [percentage, 100 - percentage],
+                            backgroundColor: ['#1a73e8', '#444'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        cutout: '70%',
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { enabled: false }
+                        }
+                    }
+                });
+
+                // Add percentage label in the center
+                ctx.font = 'bold 16px Arial';
+                ctx.fillStyle = '#fff';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(`${percentage}%`, chart.clientWidth / 2, chart.clientHeight / 2);
+            });
+        });
+    </script>
+    <!-- Initialize Testimonials Carousel -->
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.carousel-item');
+        const totalTestimonials = testimonials.length;
+        const prevBtn = document.querySelector('.carousel-control.prev');
+        const nextBtn = document.querySelector('.carousel-control.next');
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.toggle('active', i === index);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        });
+
+        // Auto-slide testimonials every 5 seconds
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+    </script>
 </body>
-</html>
+</html> 

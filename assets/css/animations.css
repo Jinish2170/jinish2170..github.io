@@ -1,0 +1,184 @@
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-section {
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Additional Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-In Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Color Pulse Animation */
+@keyframes colorPulse {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Smooth Gradient Animation */
+@keyframes smoothGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Gradient Flow Animation */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Carousel Fade Animation */
+@keyframes fadeTransition {
+    0% { opacity: 0; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.95); }
+}
+
+.cta-btn, .project-card a {
+    background: var(--background-gradient);
+    background-size: 400% 400%;
+    animation: smoothGradient 8s ease infinite;
+}
+
+/* Apply Animations */
+.animate-heading {
+    animation: fadeInDown 1.5s ease-out forwards;
+}
+
+.animate-subheading {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.animate-button {
+    animation: slideIn 2.5s ease-out forwards;
+}
+
+.service-card, .testimonial-card {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.project-card a {
+    animation: slideIn 2s ease-out forwards;
+}
+
+.carousel-item {
+    animation: fadeTransition 10s infinite;
+}
+
+/* Project Carousel Animations */
+.carousel {
+    animation: slideIn 2s ease-out forwards;
+}
+
+.carousel-caption {
+    animation: fadeIn 3s ease-out forwards;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Smooth Fade In Animation */
+@keyframes smoothFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.smoothFadeIn {
+    animation: smoothFadeIn 0.5s ease-in-out forwards;
+}
+
+/* Button Hover Animation */
+.btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(255,255,255,0.1);
+    transition: height 0.3s ease;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    height: 100%;
+}
+
+/* ...additional animations... */
