@@ -158,18 +158,18 @@
 </head>
 <body>
     <!-- Enhanced Navigation -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-lg">
+    <nav class="navbar bg-transparent fixed top-0 w-full z-50">
         <div class="container mx-auto px-4 flex items-center justify-between py-4">
-            <a href="#" class="text-2xl font-bold text-gray-800">J K</a>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#home" class="nav-link text-gray-600 hover:text-blue-600">Home</a></li>
-                <li><a href="#about" class="nav-link text-gray-600 hover:text-blue-600">About</a></li>
-                \\<li><a href="#expertise" class="nav-link text-gray-600 hover:text-blue-600">Expertise</a></li>
-                <li><a href="#technologies" class="nav-link text-gray-600 hover:text-blue-600">Technologies</a></li>
-                <li><a href="#projects" class="nav-link text-gray-600 hover:text-blue-600">Projects</a></li>
-                <li><a href="#contact" class="nav-link text-gray-600 hover:text-blue-600">Contact</a></li>
+            <a href="#" class="logo text-2xl font-bold text-white">J K</a>
+            <ul class="hidden md:flex space-x-6 nav-links">
+                <li><a href="#home" class="nav-link text-white hover:text-gray-300">Home</a></li>
+                <li><a href="#about" class="nav-link text-white hover:text-gray-300">About</a></li>
+                <li><a href="#expertise" class="nav-link text-white hover:text-gray-300">Expertise</a></li>
+                <li><a href="#technologies" class="nav-link text-white hover:text-gray-300">Technologies</a></li>
+                <li><a href="#projects" class="nav-link text-white hover:text-gray-300">Projects</a></li>
+                <li><a href="#contact" class="nav-link text-white hover:text-gray-300">Contact</a></li>
             </ul>
-            <button class="md:hidden text-gray-600 focus:outline-none" aria-label="Toggle navigation">
+            <button class="toggle-btn md:hidden" aria-label="Toggle navigation">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <!-- ...existing code... -->
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5h16M4 12h16M4 19h16" />
@@ -235,73 +235,17 @@
             <i class="fas fa-chevron-down text-white text-2xl"></i>
         </div>
     </header>
-    <!-- Enhanced About Section -->
-    <section id="about" class="py-24 bg-gradient-to-b from-gray-900 to-gray-800">
-        <div class="container mx-auto px-4">
-            <!-- Glass Container -->
-            <div class="backdrop-blur-lg bg-white/10 rounded-3xl p-8 shadow-2xl">
-                <h2 class="text-5xl font-bold text-center text-white mb-16">
-                    About <span class="text-blue-500">Me</span>
-                </h2>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <!-- Profile Image Side -->
-                    <div class="relative group">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                        <div class="relative aspect-square rounded-2xl overflow-hidden">
-                            <img 
-                                src="images\profile.jpg" 
-                                alt="Jinish Kathiriya"
-                                class="object-cover w-full h-full transform group-hover:scale-105 transition duration-500"
-                            >
-                        </div>
-                        <!-- Social Links -->
-                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
-                            <a href="https://github.com/jinish2170" class="social-icon" aria-label="GitHub">
-                                <i class="fab fa-github text-2xl"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/yourusername" class="social-icon" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin text-2xl"></i>
-                            </a>
-                            <!-- Add more social links as needed -->
-                        </div>
-                    </div>
-
-                    <!-- Content Side -->
-                    <div class="space-y-8">
-                        <div class="text-white">
-                            <h3 class="text-2xl font-bold mb-4">Who am I?</h3>
-                            <p class="text-gray-300 leading-relaxed">
-                                I'm a dedicated technologist with expertise in artificial intelligence, machine learning, and cybersecurity. My goal is to develop cutting-edge solutions that address complex challenges and drive technological advancement.
-                            </p>
-                        </div>
-
-                        <!-- Interactive Skill Bars -->
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-white mb-6">Core Skills</h3>
-                            <div class="skill-bar" data-skill="AI & Machine Learning" data-percentage="95">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-white">AI & Machine Learning</span>
-                                    <span class="text-blue-400">95%</span>
-                                </div>
-                                <div class="h-2 bg-gray-700 rounded-full">
-                                    <div class="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-skill-95"></div>
-                                </div>
-                            </div>
-                            <!-- Add more skill bars as needed -->
-                        </div>
-                            </div>
-                            <!-- Carousel Controls -->
-                            <div class="flex justify-center mt-4 space-x-2">
-                                <button class="carousel-control prev" aria-label="Previous testimonial">
-                                    <i class="fas fa-chevron-left text-white"></i>
-                                </button>
-                                <button class="carousel-control next" aria-label="Next testimonial">
-                                    <i class="fas fa-chevron-right text-white"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+    <section id="about" class="about glassmorphic py-16">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="about-image">
+                    <img src="assets/images/background.jpg" alt="About Me" class="rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
+                </div>
+                <div class="about-content">
+                    <h2 class="text-5xl font-extrabold mb-6 text-gray-800 dark:text-white">About Me</h2>
+                    <p class="mb-4 text-lg text-gray-600 dark:text-gray-300">I am Jinish Kathiriya, an AI Developer, Machine Learning Expert, and Cybersecurity Specialist dedicated to innovating technology and securing the future.</p>
+                    <p class="mb-6 text-lg text-gray-600 dark:text-gray-300">With expertise in Python, JavaScript, and C++, I develop intelligent systems that address complex challenges and enhance user experiences. My skills in AI and machine learning enable me to create robust and scalable models.</p>
+                    <a href="#contact" class="btn btn-primary px-6 py-3 text-white rounded-md shadow hover:bg-blue-700 transition">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -671,35 +615,5 @@
             });
         });
     </script>
-    <!-- Initialize Testimonials Carousel -->
-    <script>
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.carousel-item');
-        const totalTestimonials = testimonials.length;
-        const prevBtn = document.querySelector('.carousel-control.prev');
-        const nextBtn = document.querySelector('.carousel-control.next');
-
-        function showTestimonial(index) {
-            testimonials.forEach((testimonial, i) => {
-                testimonial.classList.toggle('active', i === index);
-            });
-        }
-
-        prevBtn.addEventListener('click', () => {
-            currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
-            showTestimonial(currentTestimonial);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
-            showTestimonial(currentTestimonial);
-        });
-
-        // Auto-slide testimonials every 5 seconds
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
-            showTestimonial(currentTestimonial);
-        }, 5000);
-    </script>
 </body>
-</html> 
+</html>
