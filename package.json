@@ -1,17 +1,13 @@
-
 {
     "name": "portfolio",
     "version": "1.0.0",
     "scripts": {
         "lint": "eslint .",
         "test": "jest"
-        // ...existing scripts...
     },
     "devDependencies": {
         "eslint": "^7.32.0",
         "jest": "^27.0.6",
-        "prettier": "^2.3.2",
-        // ...additional dev dependencies...
+        "prettier": "^2.3.2"
     }
-    // ...existing code...
 }
