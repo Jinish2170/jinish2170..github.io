@@ -331,7 +331,7 @@ section h2::after {
     background: var(--secondary);
     border-radius: 10px;
     padding: 2rem;
-    text-align: center;
+    text-align: center; 
 }
 
 .about p {
