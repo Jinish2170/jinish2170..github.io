@@ -439,21 +439,22 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="parallax parallax-projects py-16">
+    <section id="projects" class="py-16 bg-gradient-to-b from-gray-900 via-gray-800 to-black">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-semibold text-center mb-12">Projects</h2>
-            <div class="flex justify-center mb-8">
-                <!-- Project Filters -->
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="ai">AI & ML</button>
-                <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+            <h2 class="text-4xl font-semibold text-center mb-12 text-white">Featured Projects</h2>
+            
+            <!-- Project Filters -->
+            <div class="flex justify-center mb-12 filter-container">
+                <button class="filter-btn active mx-2" data-filter="all">All</button>
+                <button class="filter-btn mx-2" data-filter="ai">AI & ML</button>
+                <button class="filter-btn mx-2" data-filter="web">Web</button>
+                <button class="filter-btn mx-2" data-filter="cybersecurity">Security</button>
             </div>
-            <!-- Kept a single project container for dynamic loading -->
-            <div id="projectsContainer" class="project-grid">
+
+            <!-- Projects Grid Container -->
+            <div id="projectsContainer" class="projects-grid">
                 <!-- Projects will be dynamically loaded here -->
             </div>
-            <!-- ...existing code... -->
         </div>
     </section>
 

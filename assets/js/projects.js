@@ -33,15 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (projectsContainer) {
         projects.forEach(project => {
             const card = document.createElement("div");
-            card.className = "project-card p-4 bg-white/10 backdrop-blur-sm rounded-lg shadow-lg transition-transform hover:scale-105";
+            card.className = "project-card";
             
             card.innerHTML = `
-                <!-- Project Card Content -->
-                <h3 class="text-2xl font-bold mb-2">${project.name}</h3>
-                <p class="mb-2">${project.description}</p>
-                <p class="mb-1"><strong>Tech Stack:</strong> ${project.tech}</p>
-                <p class="mb-2"><strong>Features:</strong> ${project.features}</p>
-                <a href="#contact" class="btn btn-primary mt-2 inline-block">Contact for Details</a>
+                <div class="project-content">
+                    <h3>${project.name}</h3>
+                    <p>${project.description}</p>
+                    <div class="project-tags">
+                        <span class="project-tag">${project.tech}</span>
+                        ${project.features.split('·').map(feature => 
+                            `<span class="project-tag">${feature.trim()}</span>`
+                        ).join('')}
+                    </div>
+                    <div class="project-links">
+                        <a href="#contact" class="project-btn">Learn More</a>
+                    </div>
+                </div>
             `;
             
             projectsContainer.appendChild(card);
