@@ -159,5 +159,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Animate skill bars when they come into view
+const observerCallback = (entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const skillCard = entry.target;
+            const skillLevel = skillCard.getAttribute('data-skill');
+            const progressBar = skillCard.querySelector('.skill-progress');
+            progressBar.style.width = `${skillLevel}%`;
+        }
+    });
+};
+
+const observer = new IntersectionObserver(observerCallback, {
+    threshold: 0.5
+});
+
+document.querySelectorAll('.skill-card').forEach(card => {
+    observer.observe(card);
+});
+
 /* ESLint Configuration */
 // Added ESLint configuration in .eslintrc.json file (not shown)

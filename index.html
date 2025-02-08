@@ -19,8 +19,8 @@
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/css/critical.css" as="style">
-    <link rel="preload" href="assets/js/animations.js" as="script">
+    <link rel="preload" href="assets\css\style.css" as="style">
+    <link rel="preload" href="assets\css\animations.css" as="script">
     
     <!-- Critical CSS -->
     <style>
@@ -164,7 +164,6 @@
             <ul class="hidden md:flex space-x-6 nav-links">
                 <li><a href="#home" class="nav-link text-white hover:text-gray-300">Home</a></li>
                 <li><a href="#about" class="nav-link text-white hover:text-gray-300">About</a></li>
-                <li><a href="#expertise" class="nav-link text-white hover:text-gray-300">Expertise</a></li>
                 <li><a href="#technologies" class="nav-link text-white hover:text-gray-300">Technologies</a></li>
                 <li><a href="#projects" class="nav-link text-white hover:text-gray-300">Projects</a></li>
                 <li><a href="#contact" class="nav-link text-white hover:text-gray-300">Contact</a></li>
@@ -183,12 +182,7 @@
         </div>
     </nav>
 
-    <!-- Language Selector -->
-    <nav class="language-selector">
-        <button data-lang="en">English</button>
-        <button data-lang="es">Español</button>
-        <!-- ...additional languages... -->
-    </nav>
+    
 
     <!-- Modernized Hero Section -->
     <header id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -217,14 +211,13 @@
             </style>
             
             <div class="cta-button-wrapper">
-                <a href="#projects" class="cta-button group">
-                    View Projects
-                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                <a href="#projects" class="cta-button">
+                    Projects <i class="fas fa-arrow-right"></i>
                 </a>
             <br>
                 <a href="#contact" class="cta-button-secondary group">
                     Get in Touch
-                    <i class="fas fa-envelope ml-2 group-hover:scale-110 transition-transform"></i>
+                    <i class="fas fa-envelope ml-2 group-hover:scale-70 transition-transform"></i>
                 </a>
             </div>
             
@@ -236,30 +229,32 @@
         </div>
     </header>
     <!-- New Enhanced About Section -->
-<section id="about" class="about-section glassmorphic py-16">
-    <div class="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center gap-8">
-        <!-- Profile Image -->
-        <div class="w-full md:w-1/2">
-            <img src="assets/images/profile.jpg" alt="Jinish Kathiriya" class="rounded-lg shadow-lg w-full">
-        </div>
-        <!-- About Content -->
-        <div class="w-full md:w-1/2 text-gray-200">
-            <h2 class="text-4xl font-extrabold mb-6">About Me</h2>
-            <p class="mb-4 text-lg">
-                Hello, I’m Jinish—a dynamic software engineer with a passion for transforming intricate challenges into innovative, efficient solutions. With extensive experience in full-stack web development, machine learning, and cybersecurity, I build projects that have real-world impact.
-            </p>
-            <p class="mb-4 text-lg">
-                I leverage a diverse toolkit including JavaScript, Python, C++, C, and Java, alongside frameworks like React, Node.js, TensorFlow, and PyTorch. My experience spans databases (MySQL, MongoDB, PostgreSQL) and DevOps tools such as Docker, Kubernetes, GitHub Actions, and Jenkins.
-            </p>
-            <p class="mb-4 text-lg">
-                Intrigued by the frontiers of cybersecurity and AI, I’ve developed projects like an AI-powered Chess Bot, a Cyber Security AI File Scanner, a voice-activated Web Assistant, and BizzPortal—a comprehensive business management portal.
-            </p>
-            <p class="text-lg">
-                Let’s create extraordinary solutions together. <a href="#contact" class="underline text-highlight">Get in touch</a> to start the conversation!
-            </p>
+<section id="about" class="relative py-20 overflow-hidden" style="background: linear-gradient(135deg, #0a0a0a, #1e1e1e);">
+    <!-- Animated Gradient Overlay -->
+    <div class="absolute inset-0 animate-gradientFlow opacity-50"></div>
+    <div class="relative container mx-auto px-6 lg:px-20">
+        <div class="bg-black/70 p-10 rounded-lg shadow-xl transform transition duration-500 hover:scale-105">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-white animate-fadeInDown">
+                About Me
+            </h2>
+            <div class="text-lg text-gray-300 space-y-4 animate-fadeIn">
+                <p>
+                    Hello, I’m Jinish—a dynamic software engineer with a passion for transforming intricate challenges into innovative, efficient solutions. With extensive experience in full-stack web development, machine learning, and cybersecurity, I build projects that have real-world impact.
+                </p>
+                <p>
+                    I leverage a diverse toolkit including JavaScript, Python, C++, C, and Java, alongside frameworks like React, Node.js, TensorFlow, and PyTorch. My expertise spans databases (MySQL, MongoDB, PostgreSQL) and DevOps tools such as Docker, Kubernetes, GitHub Actions, and Jenkins.
+                </p>
+                <p>
+                    Intrigued by the frontiers of cybersecurity and AI, I’ve developed ventures like an AI-powered Chess Bot, a Cyber Security AI File Scanner, a voice-activated Web Assistant, and BizzPortal—a comprehensive business management portal.
+                </p>
+                <p>
+                    Let’s create extraordinary solutions together. <a href="#contact" class="underline text-teal-400 hover:text-teal-300 transition">Get in touch</a> to start the conversation!
+                </p>
+            </div>
         </div>
     </div>
 </section>
+
 <!-- ...existing subsequent code... -->
 
     <!-- Add these styles to your existing CSS -->
@@ -380,39 +375,64 @@
     </style>
 
     <!-- Technologies Section -->
-    <section id="technologies" class="py-16">
+    <section id="technologies" class="py-16 bg-gradient-to-b from-gray-900 to-black">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-semibold text-center mb-12">Technology Stack</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4">Programming Languages</h3>
-                    <ul class="list-disc list-inside text-lg space-y-2">
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>C++</li>
-                        <li>Java</li>
-                        <li>HTML/CSS</li>
-                    </ul>
+            <h2 class="text-4xl font-semibold text-center mb-12 text-white">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-items">
+                        <div class="skill-card" data-skill="90">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <h4>Python</h4>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-card" data-skill="85">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-card" data-skill="80">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <h4>C++</h4>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4">AI &amp; Machine Learning</h3>
-                    <ul class="list-disc list-inside text-lg space-y-2">
-                        <li>TensorFlow</li>
-                        <li>PyTorch</li>
-                        <li>Scikit-learn</li>
-                        <li>Pandas</li>
-                        <li>NumPy</li>
-                    </ul>
+
+                <!-- AI & ML -->
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-brain"></i> AI & ML</h3>
+                    <div class="skill-items">
+                        <div class="skill-card" data-skill="95">
+                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                            <h4>TensorFlow</h4>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-card" data-skill="90">
+                            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                            <h4>PyTorch</h4>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4">Tools &amp; Platforms</h3>
-                    <ul class="list-disc list-inside text-lg space-y-2">
-                        <li>MySQL</li>
-                        <li>MongoDB</li>
-                        <li>Adobe Premiere Pro</li>
-                        <li>Linux</li>
-                        <li>Windows</li>
-                    </ul>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-tools"></i> Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-card" data-skill="85">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h4>MySQL</h4>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-card" data-skill="80">
+                            <div class="skill-icon"><i class="fas fa-server"></i></div>
+                            <h4>MongoDB</h4>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -793,6 +793,14 @@ button:hover::after, .cta-btn:hover::after {
     .carousel-item p {
         font-size: 0.9rem;
     }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-category {
+        padding: 1.5rem;
+    }
 }
 
 /* Enhanced Focus Styles for Accessibility */
@@ -974,4 +982,103 @@ p {
     transform: translateY(-50%);
     color: var(--accent-color);
     font-weight: 600;
+}
+
+/* New About Section & Animated Gradient Overlay */
+#about {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0a0a0a, #1e1e1e);
+}
+
+#about > .animate-gradientFlow {
+    animation: gradientFlow 10s ease-in-out infinite;
+    background-size: 400% 400%;
+}
+
+/* You may adjust the container overlay the about content */
+#about .content-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.5s;
+}
+
+#about .content-overlay:hover {
+    transform: scale(1.02);
+}
+
+/* Enhanced Skills Section Styles */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.category-title {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.skill-items {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.skill-card h4 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--accent);
+    width: 0;
+    transition: width 1.5s ease-out;
 }
