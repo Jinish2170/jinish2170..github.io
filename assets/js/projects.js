@@ -1,37 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Define project data array
     const projects = [
         {
-            title: 'Project One',
-            description: 'Description of Project One.',
-            image: 'assets/images/project1.jpg',
-            link: 'https://example.com/project-one'
+            name: "♟️ Chess Bot",
+            description: "AI-powered chess engine using minimax with alpha-beta pruning and heuristic evaluation to create a challenging and fun chess experience.",
+            tech: "Python",
+            features: "Intelligent AI · Strategic Gameplay"
         },
         {
-            title: 'Project Two',
-            description: 'Description of Project Two.',
-            image: 'assets/images/project2.jpg',
-            link: 'https://example.com/project-two'
+            name: "🛡️ Cyber Security AI File Scanner",
+            description: "AI-driven tool to scan files (PDF, PPT, TXT) for potential threats. Trained on a cybersecurity dataset to ensure comprehensive analysis.",
+            tech: "Python",
+            features: "Threat Detection · Wide File Format Support"
+        },
+        {
+            name: "🔍 Web Assistant AI",
+            description: "Voice-controlled assistant with speech recognition and web search integration, improving browsing and workflow efficiency.",
+            tech: "Python",
+            features: "Voice Navigation · Automation"
+        },
+        {
+            name: "📈 BizzPortal",
+            description: "A business management platform with modern React.js architecture, responsive design, and features like authentication and data visualization.",
+            tech: "React",
+            features: "User Authentication · Data Visualization · Responsive Design"
         }
-        // Add more projects as needed
     ];
 
-    const projectsContainer = document.getElementById('projectsContainer');
+    // Get the projects container
+    const projectsContainer = document.getElementById("projectsContainer");
 
-    if (projects.length === 0) {
-        projectsContainer.innerHTML = '<p>No projects to display at this time.</p>';
-    } else {
+    if (projectsContainer) {
         projects.forEach(project => {
-            const projectCard = document.createElement('div');
-            projectCard.classList.add('project-card');
-
-            projectCard.innerHTML = `
-                <img src="${project.image}" alt="${project.title}">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <a href="${project.link}" target="_blank">View Project</a>
+            const card = document.createElement("div");
+            card.className = "project-card p-4 bg-white/10 backdrop-blur-sm rounded-lg shadow-lg transition-transform hover:scale-105";
+            
+            card.innerHTML = `
+                <!-- Project Card Content -->
+                <h3 class="text-2xl font-bold mb-2">${project.name}</h3>
+                <p class="mb-2">${project.description}</p>
+                <p class="mb-1"><strong>Tech Stack:</strong> ${project.tech}</p>
+                <p class="mb-2"><strong>Features:</strong> ${project.features}</p>
+                <a href="#contact" class="btn btn-primary mt-2 inline-block">Contact for Details</a>
             `;
-
-            projectsContainer.appendChild(projectCard);
+            
+            projectsContainer.appendChild(card);
         });
     }
 

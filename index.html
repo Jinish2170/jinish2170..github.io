@@ -235,21 +235,32 @@
             <i class="fas fa-chevron-down text-white text-2xl"></i>
         </div>
     </header>
-    <section id="about" class="about glassmorphic py-16">
-        <div class="container mx-auto px-6 lg:px-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="about-image">
-                    <img src="assets/images/background.jpg" alt="About Me" class="rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
-                </div>
-                <div class="about-content">
-                    <h2 class="text-5xl font-extrabold mb-6 text-gray-800 dark:text-white">About Me</h2>
-                    <p class="mb-4 text-lg text-gray-600 dark:text-gray-300">I am Jinish Kathiriya, an AI Developer, Machine Learning Expert, and Cybersecurity Specialist dedicated to innovating technology and securing the future.</p>
-                    <p class="mb-6 text-lg text-gray-600 dark:text-gray-300">With expertise in Python, JavaScript, and C++, I develop intelligent systems that address complex challenges and enhance user experiences. My skills in AI and machine learning enable me to create robust and scalable models.</p>
-                    <a href="#contact" class="btn btn-primary px-6 py-3 text-white rounded-md shadow hover:bg-blue-700 transition">Get in Touch</a>
-                </div>
-            </div>
+    <!-- New Enhanced About Section -->
+<section id="about" class="about-section glassmorphic py-16">
+    <div class="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center gap-8">
+        <!-- Profile Image -->
+        <div class="w-full md:w-1/2">
+            <img src="assets/images/profile.jpg" alt="Jinish Kathiriya" class="rounded-lg shadow-lg w-full">
         </div>
-    </section>
+        <!-- About Content -->
+        <div class="w-full md:w-1/2 text-gray-200">
+            <h2 class="text-4xl font-extrabold mb-6">About Me</h2>
+            <p class="mb-4 text-lg">
+                Hello, I’m Jinish—a dynamic software engineer with a passion for transforming intricate challenges into innovative, efficient solutions. With extensive experience in full-stack web development, machine learning, and cybersecurity, I build projects that have real-world impact.
+            </p>
+            <p class="mb-4 text-lg">
+                I leverage a diverse toolkit including JavaScript, Python, C++, C, and Java, alongside frameworks like React, Node.js, TensorFlow, and PyTorch. My experience spans databases (MySQL, MongoDB, PostgreSQL) and DevOps tools such as Docker, Kubernetes, GitHub Actions, and Jenkins.
+            </p>
+            <p class="mb-4 text-lg">
+                Intrigued by the frontiers of cybersecurity and AI, I’ve developed projects like an AI-powered Chess Bot, a Cyber Security AI File Scanner, a voice-activated Web Assistant, and BizzPortal—a comprehensive business management portal.
+            </p>
+            <p class="text-lg">
+                Let’s create extraordinary solutions together. <a href="#contact" class="underline text-highlight">Get in touch</a> to start the conversation!
+            </p>
+        </div>
+    </div>
+</section>
+<!-- ...existing subsequent code... -->
 
     <!-- Add these styles to your existing CSS -->
     <style>
@@ -418,13 +429,11 @@
                 <button class="filter-btn" data-filter="ai">AI & ML</button>
                 <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
             </div>
+            <!-- Kept a single project container for dynamic loading -->
             <div id="projectsContainer" class="project-grid">
                 <!-- Projects will be dynamically loaded here -->
-                
             </div>
-            <div class="projects-container" id="projectsContainer">
-                <!-- Project items will be added here -->
-            </div>
+            <!-- ...existing code... -->
         </div>
     </section>
 
