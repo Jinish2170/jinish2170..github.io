@@ -229,26 +229,57 @@
         </div>
     </header>
     <!-- New Enhanced About Section -->
-<section id="about" class="relative py-20 overflow-hidden" style="background: linear-gradient(135deg, #0a0a0a, #1e1e1e);">
-    <!-- Animated Gradient Overlay -->
-    <div class="absolute inset-0 animate-gradientFlow opacity-50"></div>
+<section id="about" class="relative py-20 overflow-hidden bg-gradient-to-br from-gray-900 to-black">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div class="absolute inset-0 animate-gradientFlow opacity-50"></div>
+    </div>
+
     <div class="relative container mx-auto px-6 lg:px-20">
-        <div class="bg-black/70 p-10 rounded-lg shadow-xl transform transition duration-500 hover:scale-105">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-white animate-fadeInDown">
-                About Me
-            </h2>
-            <div class="text-lg text-gray-300 space-y-4 animate-fadeIn">
-                <p>
-                    Hello, I’m Jinish—a dynamic software engineer with a passion for transforming intricate challenges into innovative, efficient solutions. With extensive experience in full-stack web development, machine learning, and cybersecurity, I build projects that have real-world impact.
+        <!-- About Content -->
+        <div class="glassmorphic p-8 md:p-12 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Column -->
+            <div class="space-y-6 transform hover:scale-105 transition-all duration-500">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8 relative">
+                    About Me
+                    <span class="absolute bottom-0 left-0 w-24 h-1 bg-accent"></span>
+                </h2>
+                <div class="stats-grid grid grid-cols-2 gap-4">
+                    <div class="stat-card p-4 text-center">
+                        <span class="text-3xl font-bold text-accent">4+</span>
+                        <p class="text-sm text-gray-300">Years Experience</p>
+                    </div>
+                    <div class="stat-card p-4 text-center">
+                        <span class="text-3xl font-bold text-accent">20+</span>
+                        <p class="text-sm text-gray-300">Projects</p>
+                    </div>
+                    <div class="stat-card p-4 text-center">
+                        <span class="text-3xl font-bold text-accent">3</span>
+                        <p class="text-sm text-gray-300">Specializations</p>
+                    </div>
+                    <div class="stat-card p-4 text-center">
+                        <span class="text-3xl font-bold text-accent">15+</span>
+                        <p class="text-sm text-gray-300">Technologies</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-6 text-gray-300">
+                <p class="leading-relaxed animate-fadeIn">
+                    Hello, I'm Jinish—a dynamic software engineer passionate about transforming intricate challenges into innovative, efficient solutions. With extensive experience in full-stack web development, machine learning, and cybersecurity, I build projects that have real-world impact.
                 </p>
-                <p>
-                    I leverage a diverse toolkit including JavaScript, Python, C++, C, and Java, alongside frameworks like React, Node.js, TensorFlow, and PyTorch. My expertise spans databases (MySQL, MongoDB, PostgreSQL) and DevOps tools such as Docker, Kubernetes, GitHub Actions, and Jenkins.
-                </p>
-                <p>
-                    Intrigued by the frontiers of cybersecurity and AI, I’ve developed ventures like an AI-powered Chess Bot, a Cyber Security AI File Scanner, a voice-activated Web Assistant, and BizzPortal—a comprehensive business management portal.
-                </p>
-                <p>
-                    Let’s create extraordinary solutions together. <a href="#contact" class="underline text-teal-400 hover:text-teal-300 transition">Get in touch</a> to start the conversation!
+                <div class="expertise-tags flex flex-wrap gap-3">
+                    <span class="tag">AI Development</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Cybersecurity</span>
+                    <span class="tag">Full Stack</span>
+                </div>
+                <p class="leading-relaxed animate-fadeIn">
+                    Let's create extraordinary solutions together. 
+                    <a href="#contact" class="text-accent hover:text-highlight transition-colors">Get in touch</a> 
+                    to start the conversation!
                 </p>
             </div>
         </div>

@@ -342,6 +342,58 @@ section h2::after {
     animation: fadeInUp 1s ease-in-out;
 }
 
+/* Enhanced About Section Styles */
+.bg-grid-pattern {
+    background-image: radial-gradient(circle, var(--accent) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tag {
+    background: rgba(var(--accent-rgb), 0.1);
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    border: 1px solid rgba(var(--accent-rgb), 0.2);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(var(--accent-rgb), 0.2);
+    transform: translateY(-2px);
+}
+
+#about .glassmorphic {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+}
+
+#about .glassmorphic:hover {
+    transform: scale(1.02);
+}
+
 /* Projects Section */
 .projects {
     background: var(--background-color);
