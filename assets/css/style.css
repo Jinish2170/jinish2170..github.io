@@ -1238,3 +1238,24 @@ p {
     width: 0;
     transition: width 1.5s ease-out;
 }
+
+/* Optimize CSS for performance */
+/* Add print media query for better SEO */
+@media print {
+    .navbar, .footer {
+        display: none;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+    }
+}
